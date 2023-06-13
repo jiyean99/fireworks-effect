@@ -25,7 +25,7 @@ export default class Particle extends CanvasOption {
     this.opacity -= 0.01
   }
   draw(){
-    this.ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`
+    this.ctx.fillStyle = `hsla(${this.color},100%, 65%, ${this.opacity})`
     this.ctx.beginPath()
     this.ctx.arc(this.x, this.y, 2, 0, Math.PI * 2)
     this.ctx.fill()
